@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digit Predictor</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Draw a Digit (0-9)</h1>
+        <canvas id="canvas" width="280" height="280"></canvas>
+        <div class="button-container">
+            <button id="clear-btn" onclick="clearCanvas()">Clear</button>
+            <button id="predict-btn" onclick="predict()">Predict</button>
+        </div>
+        <div id="result"></div>
+        
+        <!-- Developer Info Section -->
+        <p class="dev-info">developed by - sivaji</p>
+        <div class="info-buttons">
+            <button class="button-info" id="about-btn">About
+                <span class="hover-content">This app uses machine learning to predict handwritten digits.</span>
+            </button>
+            <button class="button-info" id="help-btn">Help
+                <span class="hover-content">Use your finger or mouse to draw a digit on the canvas.</span>
+            </button>
+        </div>
+    </div>
+    
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
